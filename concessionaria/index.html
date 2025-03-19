@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concessionária Água e Esgoto | Arcoverde, V & S</title>
+    <link rel="stylesheet" href="./assets/css/page/page.css">
+    <link rel="shortcut icon" href="imagens/logo_arcoverde.webp">
+    <script src="https://kit.fontawesome.com/62f6189027.js" crossorigin="anonymous"></script>
+    
+    <style>
+    
+        header {
+            background: url(imagens/fundo_agua.webp);
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .button {
+            background: #D88066;
+            box-shadow: 0 0 10px #D88066;
+        }
+        
+        .container-left {
+            width: 100% !important;
+        }
+        
+        .title, .subtitle {
+            text-align: center;
+        }
+        
+        main #container1 .container .contents .content .subtitle {
+            text-align: left !important;
+        }
+        
+        main #container3 .container .contents .content {
+            align-content: space-between;
+            display: grid;
+        }
+        
+        .depoimento p.nome {
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-top: 1em;
+        }
+        
+        #servicos {
+            padding: 4em 1em;
+        }
+        
+        #servicos .container {
+            display: grid;
+        }
+        
+        #servicos .container .title {
+            font-size: 1.75rem;
+        }
+        
+        #servicos .container .desc {
+            text-align: center;
+        }
+        
+        #servicos .container .subtitle b {
+            color: #fff;
+            display: inline-block;
+            background: #D88066;
+            padding: 0 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        #servicos .container .text {
+            text-align: center;
+        }
+        
+        header .container .container-left .logo {
+            display: grid;
+            width: 100%;
+        }
+        
+        header .container .container-left .logo img {
+            margin: 0 auto;
+            width: 175px;
+        }
+        
+        main #container1 .container .contents .content .favicon {
+            background-color: #D88066;
+        }
+        
+        main #container1 .container .contents .content {
+            border: 5px solid #000;
+        }
+        
+        main #container4 .container .faq div.title {
+            background-color: #D88066;
+        }
+        
+        /* Rodapé */
+        
+        footer {
+            background-color: #000;
+        }
+        
+        footer .conteudo {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 4em 1em;
+            width: 100%;
+        }
+        
+        footer .conteudo .lista .item {
+            margin-bottom: 0.5em;
+        }
+        
+        footer .conteudo .lista .item a {
+            align-items: center;
+            color: #fff;
+            display: flex;
+            gap: 15px;
+            text-decoration: none;
+        }
+        
+        footer .conteudo .lista .item a i {
+            color: #D88066;
+            font-size: 1.2em;
+        }
+        
+        footer .conteudo .mapa iframe {
+            height: 250px;
+            width: 100%;
+        }
+        
+        footer .copyright {
+            background-color: #000;
+            display: grid;
+            justify-content: center;
+            padding: 1em;
+        }
+        
+        footer .copyright span {
+            color: #fff;
+            text-align: center;
+        }
+        
+        @media(max-width: 768px) {
+            
+            footer .conteudo {
+                grid-template-columns: 1fr;
+            }
+            
+            footer .esquerda {
+                margin-bottom: 2em;
+            }
+            
+        }
+        
+        /* Fundo cinza */
+        
+        .fundo-cinza {
+            background: #b1b1b3;
+            box-shadow: 0 0 10px #b1b1b3;
+            padding: 0rem 0 4rem 0;
+            border-radius: 1rem;
+            padding: 4em 1em;
+        }
+        
+        /* Equipe */
+        
+        .equipe {
+            padding: 4em 1em;
+        }
+        
+        .equipe .container {
+            display: grid;
+            width: 100%;
+        }
+        
+        .equipe h3 {
+            text-align: center;
+        }
+        
+        .equipe .title {
+            font-size: 1.75rem;
+        }
+        
+        .equipe .lista {
+            display: grid;
+            gap: 10px;
+            justify-content: center;
+            margin: 1em 0em;
+        }
+        
+        .equipe .lista p {
+            align-items: center;
+            display: flex;
+            font-size: 1.2rem;
+            gap: 10px;
+        }
+        
+        .equipe .lista p i {
+            color: #0bd40b;
+            font-size: 0.5em;
+        }
+        
+        .equipe .aviso b {
+            font-size: 1.2rem;
+            display: block;
+            text-align: center;
+        }
+        
+        .equipe a {
+            width: fit-content;
+        }
+        
+        /* FAQ */
+        
+        .faq {
+            background: #fff !important;
+            box-shadow: none !important;
+        }
+        
+        .faq .title {
+            color: #000 !important;
+        }
+        
+        .faq .perguntas .title {
+            border: 2px solid #000 !important;
+        }
+        
+        .faq div.title.active+.resposta {
+            color: #000 !important;
+        }
+        
+        .faq .aviso p {
+            margin-top: 1em;
+            text-align: center;
+        }
+        
+        /* Quem Somos */
+        
+        .quemsomos .texto p {
+            margin-top: 1em;
+            text-align: center;
+        }
+        
+        /* Como Funciona */
+        
+        .comofunciona {
+            background: #b1b1b3;
+            border-radius: 1rem;
+            box-shadow: 0 0 10px #b1b1b3;
+        }
+        
+        /* Solicitar */
+        
+        .solicitar {
+            padding: 4em 1em;
+        }
+        
+        .solicitar .container {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .solicitar h3 {
+            font-size: 1.75rem;
+        }
+        
+        .solicitar .lista {
+            display: grid;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .solicitar .lista p {
+            font-size: 1.2rem;
+        }
+        
+        .solicitar .lista p i {
+            color: #0bd40b;
+        }
+        
+        .solicitar .aviso b {
+            font-size: 1.2rem;
+            display: block;
+            text-align: center;
+        }
+        
+        .solicitar a {
+            width: fit-content;
+        }
+        
+    </style>
+    
+</head>
+<body>
+    
+    <a id="whatsapp" href="https://wa.me/5586999571936?text=Quero%20falar%20com%20um%20advogado">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <span></span>
+        <section class="container">
+            <article class="container-left" data-anime="top">      
+                <div class="logo">
+                    <img src="imagens/logo_arcoverde.webp" alt="">
+                </div>  
+
+                <h1 class="title">
+                    Está pagando taxas abusivas de água e esgoto em Teresina e região?
+                </h1>
+
+                <p class="subtitle">
+                    Milhares de consumidores estão sendo cobrados indevidamente na conta de água. Você pode estar pagando a mais sem saber!
+                </p>
+
+                <p class="subtitle">
+                    A concessionária de água e esgoto está aplicando cobranças irregulares, exigindo valores que não são de responsabilidade do consumidor. Se você percebeu um aumento injustificado na sua conta, é seu direito contestar!
+                    <br><br>
+                    <b>Fale agora com um especialista e descubra como podemos te ajudar!</b>
+                </p>
+                
+                <a href="https://wa.me/5586999571936?text=Quero%20falar%20com%20um%20advogado" class="button">
+                    <i class="fa-brands fa-whatsapp"></i> Enviar mensagem no WhatsApp  
+                </a>
+            </article>
+        </section>
+    </header>
+
+    <main>
+        <div id="container1" class="quemsomos">
+            <section class="container">
+                <h2 class="title" data-anime="top" data-desk>
+                    Quem Somos
+                </h2>
+
+                <h2 class="title" data-anime="top" data-cell style="text-align: center;">
+                    Quem Somos
+                </h2>
+    
+                <div class="texto">
+                    <p>O <b>Escritório Arcoverde, V & S</b> atua há anos na <b>defesa dos direitos do consumidor</b>, garantindo que cidadãos não sejam lesados por cobranças abusivas. Nossa equipe de especialistas em <b>Direito do Consumidor</b> está preparada para analisar sua conta e reaver valores cobrados indevidamente pela concessionária de água e esgoto em Teresina.
+                        <br><br>
+                        Nosso compromisso é com a <b>justiça e transparência</b>, proporcionando atendimento <b>humanizado e acessível</b>, para que você tenha segurança e assertividade na busca pelos seus direitos.</p>
+                </div>
+                
+                <a href="https://wa.me/5586999571936?text=Quero%20falar%20com%20um%20advogado" class="button">
+                    <i class="fa-brands fa-whatsapp"></i> Converse com um especialista agora mesmo!
+                </a>
+
+            </section>
+        </div>
+
+        <!--<div id="container2">
+            <div class="container">
+                <p class="title" data-desk data-anime="top">
+                    Agende Sua Consulta Inicial Gratuita
+                </p>
+
+                <p class="title" data-cell data-anime="top">
+                    Agende Sua Consulta<br>Inicial Gratuita
+                </p>
+
+                <p class="text">
+                    Está enfrentando um problema trabalhista? Não espere mais. Agende uma consulta inicial gratuita com a Dra. Maria de Fátima e descubra como podemos ajudar você a alcançar a justiça que merece
+                </p>
+
+                <a href="https://wa.me/5511939607004?text=Gostaria%20de%20falar%20com%20um%20advogado" class="button">
+                    Agendar Minha Consulta
+                </a>
+            </div>
+        </div>-->
+        
+        <section class="container3 comofunciona" id="servicos">
+            <article class="container">
+                <h3 class="title" data-anime="top">
+                    Como Funciona?
+                </h3>
+
+                <p class="subtitle">
+                    <b>Analisamos sua conta</b>
+                </p>
+
+                <p class="text">
+                    Identificamos cobranças indevidas e valores abusivos.
+                </p>
+                
+                <p class="subtitle">
+                    <b>Entramos com a solicitação de revisão</b>
+                </p>
+
+                <p class="text">
+                    Contestamos os valores junto à concessionária.
+                </p>
+                
+                <p class="subtitle">
+                    <b>Você recebe seu reembolso</b>
+                </p>
+                
+                <p class="text">
+                    Caso haja valores cobrados de forma ilegal, garantimos que você tenha seu dinheiro de volta.
+                </p>
+
+                <p class="subtitle CTA">
+                    Agende sua Consulta inicial e descubra se você tem direito a reembolso! 
+                </p>
+
+                <a href="https://wa.me/5586999571936?text=Quero%20falar%20com%20um%20advogado" class="button">
+                    <i class="fa-brands fa-whatsapp"></i> Entre em Contato Agora 
+                </a>
+            </article>
+        </section>
+        
+        <!-- Solicitar -->
+        <section class="solicitar">
+            <div class="container">
+                <h3 class="title">
+                    Quem pode solicitar a revisão da conta de água?
+                </h3>
+                <div class="lista">
+                    <p><i class="fa-solid fa-circle-check"></i> Qualquer consumidor que percebeu aumento injustificado na conta.</p>
+                    <p><i class="fa-solid fa-circle-check"></i> Proprietários de imóveis que sofreram reajustes sem aviso prévio.</p>
+                    <p><i class="fa-solid fa-circle-check"></i> Pessoas que foram cobradas por serviços não prestados.</p>
+                    <p><i class="fa-solid fa-circle-check"></i> Moradores de Teresina que suspeitam de erro na medição do consumo.</p>
+                </div>
+                <div class="aviso">
+                    <b>Envie sua conta agora e veja se você pode ser reembolsado! </b>
+                    <a href="https://wa.me/5586999571936?text=Quero%20falar%20com%20um%20advogado" class="button">
+                        <i class="fa-brands fa-whatsapp"></i> Entre em Contato Agora 
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <div id="container3" style="background: #b1b1b3; border-radius: 1rem; box-shadow: 0 0 10px #b1b1b3;">
+            <div class="container">
+                <h3 class="title" data-desk data-anime="top">
+                    Depoimentos de Clientes
+                </h3>
+
+                <h3 class="title" data-cell data-anime="top">
+                    Depoimentos<br> de Clientes
+                </h3>
+
+                <article class="contents">
+                    <div class="content depoimento" data-anime="top">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+    
+                        <p class="text">
+                            "Descobri que estava pagando quase o dobro do que deveria! A equipe do Arcoverde me ajudou a recuperar o valor cobrado indevidamente. Excelente atendimento!"
+                        </p>
+                        
+                        <div class="baixo">
+                            <p class="nome">Carlos M.</p>
+                        </div>    
+                    </div>
+    
+                    <div class="content depoimento" data-anime="top">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+    
+                        <p class="text">
+                            "Achei que não tinha solução, mas graças ao suporte do escritório, consegui uma redução significativa na minha conta de água. Recomendo!"
+                        </p>
+                        
+                        <div class="baixo">
+                            <p class="nome">Ana L.</p>
+                        </div>    
+                    </div>
+    
+                    <div class="content depoimento" data-anime="top">
+                        <div class="stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+    
+                        <p class="text" data-anime="top">
+                            "Atendimento super rápido e eficiente! Me explicaram tudo direitinho e resolveram meu problema sem burocracia."
+                        </p>
+                        
+                        <div class="baixo">
+                            <p class="nome">Fernanda R.</p>
+                        </div>    
+                    </div>
+                </article>
+            </div>
+        </div>
+        
+        <!-- Equipe -->
+        <section class="equipe">
+            <div class="container">
+                <div class="caixa">
+                    <h3 class="title">
+                        Defenda seus direitos! Não pague taxas indevidas!
+                    </h3>
+                    <div class="lista">
+                        <p><i class="fa-solid fa-circle"></i> Atendimento humanizado e especializado.</p>
+                        <p><i class="fa-solid fa-circle"></i> Processo simples e sem burocracia.</p>
+                        <p><i class="fa-solid fa-circle"></i> Seu dinheiro de volta se houver cobrança indevida.</p>
+                    </div>
+                    <div class="aviso">
+                        <b>Clique abaixo e fale com um especialista agora!</b>
+                        <a href="https://wa.me/5586999571936?text=Quero%20falar%20com%20um%20advogado" class="button">
+                            <i class="fa-brands fa-whatsapp"></i> Entrar em contato
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="container4" class="faq fundo-cinza">
+            <div class="container">
+                <h5 class="title">
+                    Perguntas Frequentes
+                </h5>
+
+                <div class="faq perguntas">
+                    <div class="title active" >
+                        Quais cobranças podem ser contestadas?
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <p class="resposta f2">
+                        Tarifas abusivas, reajustes não informados, cobranças por serviços não prestados e irregularidades no cálculo da conta.
+                    <p>
+    
+                    <div class="title" >
+                        Como sei se estou pagando mais do que deveria?
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <p class="resposta f2">
+                        Basta enviar sua conta para análise! Nossos especialistas identificam rapidamente possíveis erros.
+                    <p>
+                        
+                    <div class="title" >
+                        Quanto custa para iniciar o processo?
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <p class="resposta f2">
+                        A consulta inicial custa <b>R$ 100,00</b>, valor que cobre a análise da conta e os primeiros encaminhamentos do processo.
+                    <p>    
+                    
+                    <div class="title" >
+                        Em quanto tempo terei uma resposta?
+                        <div>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                    <p class="resposta f2">
+                        A análise é rápida! Após o envio da conta, retornamos com uma resposta em até <b>48 horas</b>.
+                    <p>    
+                </div>
+                
+                <div class="aviso">
+                    <p><b>Envie sua conta agora e descubra se você pode recuperar valores pagos indevidamente!</b></p>
+                </div>
+            </div>
+        </div>
+
+        <!--<div id="container5">
+            <div class="container">
+                <p class="title" data-desk data-anime="top">
+                    Pronto para garantir seus Direitos?
+                </p>
+
+                <p class="title" data-cell data-anime="top">
+                    Pronto para garantir<br>seus Direitos?
+                </p>
+
+                <p class="subtitle">
+                    Entre em contato hoje mesmo e permita que nossa experiência trabalhe a seu favor. Não importa o quão complexo seja o seu caso, estamos prontos para lutar por você.
+                </p>
+
+                <a href="https://wa.me/5511939607004?text=Gostaria%20de%20falar%20com%20um%20advogado" class="button">
+                    Agendar Minha Consulta
+                </a>
+            </div>
+        </div>-->
+    </main>
+    
+    <footer>
+        <section class="container">
+            <div class="conteudo">
+                <div class="esquerda">
+                    <div class="lista">
+                        <div class="item">
+                            <a href="https://wa.me/5586999571936?text=Quero%20falar%20com%20um%20advogado">
+                                <i class="fa fa-whatsapp"></i>
+                                (86) 99957-1936
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <i class="fa fa-instagram"></i>
+                                
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="mailto:arcoverdevasconcelossousa@gmail.com">
+                                <i class="fa fa-envelope"></i>
+                                arcoverdevasconcelossousa@gmail.com
+                            </a>
+                        </div>
+                        <div class="item">
+                            <a href="">
+                                <i class="fa fa-map-pin"></i>
+                                R. Barroso, 758 - Centro (Sul), Teresina - PI, 64001-130
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="direita">
+                    <div class="mapa">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3974.034433199885!2d-42.8112146!3d-5.098135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e376ed806278b%3A0xcce4d904cbd4f734!2sR.%20Barroso%2C%20758%20-%20Vermelha%2C%20Teresina%20-%20PI%2C%2064000-130!5e0!3m2!1spt-BR!2sbr!4v1742185757568!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="copyright">
+            <span>Direitos Autorais © 2025 Arcoverde, V & S . Todos os direitos reservados.</span>
+        </div>
+    </footer>
+
+    <script src="./assets/js/scroll.js"></script>
+    <script>
+        const faqText = document.querySelectorAll(".faq .title");
+
+        function faq() {
+            if (this.classList.contains("active")) {
+                this.classList.remove("active");
+            } else {
+                faqText.forEach(item => {
+                    item.classList.remove("active");
+                });
+                this.classList.add("active");
+            }
+        }
+
+        faqText.forEach(item => {
+            item.addEventListener('click', faq)
+        });
+    </script>
+</body>
+</html>
